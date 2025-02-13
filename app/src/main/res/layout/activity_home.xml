@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".HomeActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/start_city_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/start_city_input"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:hint="Enter start city (E.g. Delhi)"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/destination_city_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_city_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/destination_city_input"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:hint="Enter destination (E.g. Mumbai)"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plan_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Plan My Journey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/destination_city_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
